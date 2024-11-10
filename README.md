@@ -1,5 +1,5 @@
 # Generative Adversarial Network (GAN) that generates synthetic MNIST images.
-
+https://raw.githubusercontent.com/AaTekle/GAN_MNIST/refs/heads/main/generated_images/epoch_40.png?token=GHSAT0AAAAAACVU7BMFJYOITP75Q3ER2FP4ZZQ7FSQ
 ## Key Components
 
 1. **Environment Setup**:
