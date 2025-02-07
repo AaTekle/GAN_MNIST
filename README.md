@@ -19,13 +19,11 @@
 
 ## Core Math Behind GANs
 
-### 1. **What’s the Goal of a GAN?**
+### 1. **Objectives of a GAN**
 - A GAN has two parts: a **Generator** and a **Discriminator**.
 - **Generator**: Creates fake data (e.g., images).
 - **Discriminator**: Judges whether the data is real or fake.
 - **Goal**: The generator wants to fool the discriminator, and the discriminator wants to tell the difference.
-
-This is like a forger (Generator) trying to make fake paintings and an art critic (Discriminator) deciding whether a painting is real or fake.
 
 ### 2. **The Key Math Behind GANs**
 
@@ -68,7 +66,7 @@ This is like a forger (Generator) trying to make fake paintings and an art criti
   - They adjust the weights to minimize (for the generator) or maximize (for the discriminator) their loss.
 
 ### 3. **How They Compete**
-- GAN training is like a **game**:
+- GAN training is like a **game of deception**:
   - The generator improves until it can create data that looks so real, the discriminator gets tricked.
   - The discriminator improves to better spot fake data.
 - Mathematically, this is a **min-max optimization problem**:
@@ -90,7 +88,7 @@ This is like a forger (Generator) trying to make fake paintings and an art criti
 - The generator and discriminator must stay balanced:
   - If the discriminator is too strong, the generator can’t learn.
   - If the generator is too strong, the discriminator becomes useless.
-- This is called the **vanishing gradient problem** (common issue among many different NN's), which makes GAN training tricky.
+- This is called the **vanishing gradient problem** (common issue among many different NN's as well), which makes GAN training tricky.
 
 ### 6. **Summary of Steps**
 1. Feed real data and fake data to the discriminator.
