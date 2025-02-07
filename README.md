@@ -17,7 +17,7 @@
    - Saves generated images every 10 epochs to visualize progress.
    - **End of training**: Logs and saved images help evaluate GAN performance.
 
-## Core Math Behind GANs (Simplified)
+## Core Math Behind GANs
 
 ### 1. **What’s the Goal of a GAN?**
 - A GAN has two parts: a **Generator** and a **Discriminator**.
