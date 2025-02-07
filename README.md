@@ -42,18 +42,18 @@ This is like a forger (Generator) trying to make fake paintings and an art criti
      - **Real data as real**.
      - **Fake data as fake**.
    - Mathematically:
-     \[
-     L_D = -\mathbb{E}[\log(D(x))] - \mathbb{E}[\log(1 - D(G(z)))]
-     \]
-     - \(D(x)\): Probability the discriminator assigns to real data.
-     - \(D(G(z))\): Probability it assigns to fake data.
+     ```math
+     L_D = -E[\log(D(x))] - E[\log(1 - D(G(z)))]
+     ```
+     - `D(x)`: Probability the discriminator assigns to real data.
+     - `D(G(z))`: Probability it assigns to fake data.
 
 2. **Generator’s Loss**:
-   - The generator tries to **fool the discriminator**, meaning it wants \(D(G(z))\) to be close to 1 (fake data being classified as real).
+   - The generator tries to **fool the discriminator**, meaning it wants `D(G(z))` to be close to 1 (fake data being classified as real).
    - Mathematically:
-     \[
-     L_G = -\mathbb{E}[\log(D(G(z)))]
-     \]
+     ```math
+     L_G = -E[\log(D(G(z)))]
+     ```
 
 #### C. **Gradient Descent**
 - Both the generator and discriminator use **gradient descent** to update their weights. This means:
@@ -65,9 +65,9 @@ This is like a forger (Generator) trying to make fake paintings and an art criti
   - The generator improves until it can create data that looks so real, the discriminator gets tricked.
   - The discriminator improves to better spot fake data.
 - Mathematically, this is a **min-max optimization problem**:
-  \[
-  \min_G \max_D V(D, G) = \mathbb{E}[\log(D(x))] + \mathbb{E}[\log(1 - D(G(z)))]
-  \]
+  ```math
+  \min_G \max_D V(D, G) = E[\log(D(x))] + E[\log(1 - D(G(z)))]
+  ```
 
 ### 4. **Noise and Latent Space**
 - The generator starts with **random noise** as input (a bunch of numbers, usually from a normal distribution).
@@ -88,5 +88,3 @@ This is like a forger (Generator) trying to make fake paintings and an art criti
 5. Calculate the generator's loss based on how well it fools the discriminator.
 6. Update the generator's weights.
 7. Repeat until the generator creates realistic data.
-
-GANs are like a tug-of-war, with the generator and discriminator constantly trying to outsmart each other, and the math helps them improve step by step!
