@@ -25,8 +25,6 @@
 - **Discriminator**: Judges whether the data is real or fake.
 - **Goal**: The generator wants to fool the discriminator, and the discriminator wants to tell the difference.
 
-### 2. **The Key Math Behind GANs**
-
 #### A. **Probability**
 - The discriminator outputs a **probability**: how likely the input is **real**.
   - If it's real, the output is close to 1.
